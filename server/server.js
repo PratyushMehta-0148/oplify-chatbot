@@ -16,6 +16,9 @@ const openai = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
 });
 
+app.get("/", (req, res) => {
+  res.send("Oplify AI Backend Running 🚀");
+});
 app.post("/chat", async (req, res) => {
   try {
     const { message } = req.body;
@@ -26,7 +29,7 @@ app.post("/chat", async (req, res) => {
         {
           role: "system",
           content: `You are Oplify AI Assistant — a smart, professional assistant for Oplify Solutions Pvt Ltd.
-
+cd 
 About Oplify:
 - Software company based in Pune, Maharashtra, India
 - Address: Ganga Trueno Business Park, VIP Airport Road, Viman Nagar, Pune 411014
